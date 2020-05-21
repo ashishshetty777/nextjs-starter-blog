@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "is-ci \"test:coverage\" \"test:watch\"",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|html|md)\""
   },
   "husky": {
@@ -30,6 +33,8 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
+    "is-ci-cli": "^2.0.0",
+    "jest": "^26.0.1",
     "lint-staged": "^10.2.4",
     "prettier": "^2.0.5"
   }
