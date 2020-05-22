@@ -13,7 +13,8 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|css|html|md)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-format lint"
+    "validate": "npm-run-all --parallel check-format lint test build",
+    "setup": "npm install && npm run validate"
   },
   "husky": {
     "hooks": {
@@ -22,7 +23,6 @@
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [
-      "lint",
       "prettier",
       "git add"
     ]
