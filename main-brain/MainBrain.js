@@ -19,7 +19,7 @@ function MainBrain() {
   const [text, setText] = React.useState('Hello there!')
 
   const textClickHandler = () => {
-    setText(text => (text === 'Hello there!' ? 'Been there!' : 'Hello there!'))
+    setText(text === 'Hello there!' ? 'Been there!' : 'Hello there!')
   }
   return (
     <div>

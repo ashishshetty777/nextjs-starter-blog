@@ -1,28 +1,20 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import {ThemeProvider} from 'emotion-theming'
-import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import {MainBrain} from 'main-brain'
+import {MainBrain} from '../main-brain' // WIP : Need this to make as npm module
+import utilStyles from '../styles/utils.module.css'
 import * as themes from '../utils/themes'
+
+import CustomH1 from './customh1'
+import styles from './layout.module.css'
+
 const name = 'Ashish Shetty'
 export const siteTitle = 'Next.js Sample Website'
 
-const CustomH1 = styled.h1(
-  {
-    fontSize: '5em',
-  },
-  ({theme}) => ({
-    color: theme.displayTextColor,
-    background: theme.displayBackgroundColor,
-  }),
-)
-
 export default function Layout({children, home}) {
   const [theme, setTheme] = React.useState('dark')
-  const handleThemeChange = ({target: {value}}) => setTheme(value)
+  const handleThemeChange = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
   return (
     <ThemeProvider theme={themes[theme]}>
@@ -49,9 +41,10 @@ export default function Layout({children, home}) {
                 src="/images/profile.jpg"
                 className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                 alt={name}
+                onClick={handleThemeChange}
               />
               <MainBrain />
-              <CustomH1 className={utilStyles.heading2Xl}>{name}</CustomH1>
+              <CustomH1 name={name} />
             </>
           ) : (
             <>
