@@ -22,6 +22,7 @@
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [
+      "lint",
       "prettier",
       "git add"
     ]
@@ -38,6 +39,7 @@
   "devDependencies": {
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",
     "is-ci-cli": "^2.0.0",
     "jest": "^26.0.1",

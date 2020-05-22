@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 import Date from '../components/date'
 import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
@@ -13,8 +14,8 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>I'm a Web Developer. I'm based in Mumbai, India</p>
-        <p>Today's random number is {getRandomNumber()}</p>
+        <p>I&apos;m a Web Developer. I&apos;m based in Mumbai, India</p>
+        <p>Today&apos;s random number is {getRandomNumber()}</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -34,6 +35,10 @@ export default function Home({allPostsData}) {
       </section>
     </Layout>
   )
+}
+
+Home.propTypes = {
+  allPostsData: PropTypes.array,
 }
 
 export async function getStaticProps() {
