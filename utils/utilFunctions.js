@@ -1,3 +1,3 @@
 export const getRandomNumber = () => {
-  return Math.random() * 100
+  return 2
 }
