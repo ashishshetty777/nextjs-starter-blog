@@ -3,8 +3,14 @@ import {render} from '@testing-library/react'
 import Layout from '../layout'
 
 test('renders', () => {
-  const {container} = render(<Layout />)
+  const {container} = render(<Layout home={true} />)
   expect(container).toMatchInlineSnapshot(`
+    .emotion-0 {
+      font-size: 5em;
+      color: white;
+      background: #1c191c;
+    }
+
     <div>
       <div
         class="container"
@@ -12,36 +18,18 @@ test('renders', () => {
         <header
           class="header"
         >
-          <a
-            href="/"
+          <img
+            alt="Ashish Shetty"
+            class="headerHomeImage borderCircle"
+            src="/images/profile.jpg"
+          />
+          <h1
+            class="heading2Xl emotion-0"
           >
-            <img
-              alt="Ashish Shetty"
-              class="headerImage borderCircle"
-              src="/images/profile.jpg"
-            />
-          </a>
-          <h2
-            class="headingLg"
-          >
-            <a
-              class="colorInherit"
-              href="/"
-            >
-              Ashish Shetty
-            </a>
-          </h2>
+            Ashish Shetty
+          </h1>
         </header>
         <main />
-        <div
-          class="backToHome"
-        >
-          <a
-            href="/"
-          >
-            ← Back to home
-          </a>
-        </div>
       </div>
     </div>
   `)
