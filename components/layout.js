@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {ThemeProvider} from 'emotion-theming'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import {MainBrain} from 'main-brain'
 import * as themes from '../utils/themes'
 const name = 'Ashish Shetty'
 export const siteTitle = 'Next.js Sample Website'
@@ -49,6 +50,7 @@ export default function Layout({children, home}) {
                 className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                 alt={name}
               />
+              <MainBrain />
               <CustomH1 className={utilStyles.heading2Xl}>{name}</CustomH1>
             </>
           ) : (

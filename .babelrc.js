@@ -9,5 +9,12 @@ module.exports = {
       },
     ],
   ],
-  plugins: [],
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./'],
+      },
+    ],
+  ],
 }

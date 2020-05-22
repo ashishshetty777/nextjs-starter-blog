@@ -23,6 +23,13 @@ test('renders', () => {
             class="headerHomeImage borderCircle"
             src="/images/profile.jpg"
           />
+          <div>
+            <h1
+              class=""
+            >
+              Hello there!
+            </h1>
+          </div>
           <h1
             class="heading2Xl emotion-0"
           >
