@@ -9,6 +9,7 @@
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
+    "just-jest": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|css|html|md)\"",
     "format": "npm run prettier -- --write",
