@@ -37,6 +37,7 @@
     "remark-html": "^11.0.2"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.4",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react": "^7.20.0",
