@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function PriorityText({className = '', text = '', ...props}) {
+function PriorityText({className = '', text = '', clickHandler, ...props}) {
   return (
-    <h1 className={`${className}`} {...props}>
+    <h1 className={`${className}`} onClick={clickHandler} {...props}>
       {text}
     </h1>
   )
@@ -12,12 +12,18 @@ function PriorityText({className = '', text = '', ...props}) {
 PriorityText.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
+  clickHandler: PropTypes.func,
 }
 
 function MainBrain() {
+  const [text, setText] = React.useState('Hello there!')
+
+  const textClickHandler = () => {
+    setText(text => (text === 'Hello there!' ? 'Been there!' : 'Hello there!'))
+  }
   return (
     <div>
-      <PriorityText text={'Hello there!'} />
+      <PriorityText text={text} clickHandler={textClickHandler} />
     </div>
   )
 }
