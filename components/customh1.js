@@ -14,6 +14,7 @@ const MyH1 = styled.h1(
 )
 
 export default function CustomH1({name}) {
+  // debugger
   return <MyH1 className={utilStyles.heading2Xl}>{name}</MyH1>
 }
 

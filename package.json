@@ -9,6 +9,7 @@
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "just-jest": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|css|html|md)\"",
@@ -24,8 +25,8 @@
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [
-      "prettier",
-      "git add"
+      "lint",
+      "prettier"
     ]
   },
   "dependencies": {

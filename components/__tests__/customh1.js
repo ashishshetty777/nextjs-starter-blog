@@ -4,7 +4,7 @@ import CustomH1 from '../customh1'
 // import {light} from '../../utils/themes'
 
 test('renders', () => {
-  const {container} = render(<CustomH1 name={'Hello there!'} />)
+  const {container} = render(<CustomH1 name="Hello there!" />)
   expect(container).toMatchInlineSnapshot(`
     .emotion-0 {
       font-size: 5em;
