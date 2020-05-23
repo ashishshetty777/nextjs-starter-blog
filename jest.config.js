@@ -9,4 +9,11 @@ module.exports = {
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   snapshotSerializers: ['jest-emotion'],
+  collectCoverageFrom: [
+    '**/components/**/*.js',
+    '**/lib/**/*.js',
+    '**/main-brain/**/*.js',
+    '**/pages/**/*.js',
+    '**/utils/**/*.js',
+  ],
 }
